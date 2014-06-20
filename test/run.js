@@ -157,10 +157,10 @@ function main (cb) {
               return "npm install packages/"+p
             }) ]
         , [ execChain, packages.map(function (p) {
-              return "npm test "+p
+              return "npm explore "+p+ " -- npm test"
             }) ]
         , [ execChain, packagesToRm.map(function (p) {
-              return "npm rm " + p
+              return "npm rm "+p
             }) ]
         , installAndTestEach
         ]
@@ -173,8 +173,8 @@ function main (cb) {
         setup
         , [ execChain, packages.map(function (p) {
               return [ "npm install packages/"+p
-                     , "npm test "+p
-                     , "npm rm "+p ]
+                     , "npm explore "+p+" -- npm test"
+                     , "npm rm "+p]
             }) ]
       ]
     if (process.platform !== "win32") {
