@@ -1,5 +1,5 @@
 {
-  "version": "1.4.28",
+  "version": "1.4.28-cb-err-hotfix1",
   "name": "npm",
   "description": "A package manager for node",
   "keywords": [
